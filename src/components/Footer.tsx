@@ -105,10 +105,7 @@ export default function Footer() {
           >
             <p className="text-gray-600 text-sm flex items-center gap-1">
               &copy; {new Date().getFullYear()} Volunext. Dibuat dengan{' '}
-              <HiHeart className="text-red-500 inline" /> oleh tim.
-            </p>
-            <p className="text-gray-600 text-sm">
-              Hak cipta dilindungi.
+              <HiHeart className="text-red-500 inline" /> 
             </p>
           </motion.div>
         </div>

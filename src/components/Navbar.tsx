@@ -29,19 +29,23 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: easeOut }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-dark/70 backdrop-blur-2xl border-b border-white/10 shadow-lg shadow-black/20'
+          ? 'bg-dark/60 backdrop-blur-3xl border-b border-white/10 shadow-lg shadow-black/30'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <a
+          {/* Logo dengan hover */}
+          <motion.a
             href="#home"
             className="text-2xl lg:text-3xl font-display font-bold text-gradient hover:opacity-90 transition-opacity"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
           >
             Volunext
-          </a>
+          </motion.a>
 
+          {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -50,7 +54,7 @@ export default function Navbar() {
                 className="text-sm font-medium text-gray-300 hover:text-primary transition-colors duration-300 relative group py-1"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary-light rounded-full transition-all duration-500 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary-light rounded-full transition-all duration-500 ease-out group-hover:w-full" />
               </a>
             ))}
             <TrueFocus hoverColor="rgba(16, 185, 129, 0.2)" className="rounded-full">
@@ -65,6 +69,7 @@ export default function Navbar() {
             </TrueFocus>
           </div>
 
+          {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-light p-2 rounded-lg hover:bg-white/10 transition-colors"
@@ -74,15 +79,14 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-dark/90 backdrop-blur-2xl border-b border-white/10"
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            className="md:hidden overflow-hidden bg-dark/80 backdrop-blur-3xl border-b border-white/10"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link, i) => (
