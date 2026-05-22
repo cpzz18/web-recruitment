@@ -16,10 +16,10 @@ const socialLinks = [
 ]
 
 const footerLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Division', href: '#division' },
-  { label: 'Timeline', href: '#timeline' },
+  { label: 'Beranda', href: '#home' },
+  { label: 'Tentang', href: '#about' },
+  { label: 'Divisi', href: '#division' },
+  { label: 'Linimasa', href: '#timeline' },
 ]
 
 export default function Footer() {
@@ -41,12 +41,11 @@ export default function Footer() {
               Volunext
             </a>
             <p className="text-gray-500 mt-3 text-sm leading-relaxed max-w-xs">
-              Building bridges through volunteerism. Join our community and make
-              a difference together.
+              Membangun jembatan melalui kerelawanan. Bergabunglah dengan komunitas kami dan buat perubahan bersama.
             </p>
           </motion.div>
 
-          {/* Links */}
+          {/* Tautan */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +53,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h4 className="font-heading font-semibold text-light mb-4">
-              Quick Links
+              Tautan Cepat
             </h4>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
@@ -70,7 +69,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Contact */}
+          {/* Kontak */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +77,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h4 className="font-heading font-semibold text-light mb-4">
-              Contact
+              Kontak
             </h4>
             <a
               href="mailto:hello@volunext.com"
@@ -88,7 +87,7 @@ export default function Footer() {
               hello@volunext.com
             </a>
 
-            {/* Social Icons */}
+            {/* Ikon Sosial */}
             <div className="flex gap-3 mt-5">
               {socialLinks.map((social) => (
                 <motion.a
@@ -105,7 +104,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bar Bawah */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -114,11 +113,11 @@ export default function Footer() {
           className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <p className="text-gray-600 text-sm flex items-center gap-1">
-            &copy; {new Date().getFullYear()} Volunext. Made with{' '}
-            <HiHeart className="text-red-500 inline" /> by the team.
+            &copy; {new Date().getFullYear()} Volunext. Dibuat dengan{' '}
+            <HiHeart className="text-red-500 inline" /> oleh tim.
           </p>
           <p className="text-gray-600 text-sm">
-            All rights reserved.
+            Hak cipta dilindungi.
           </p>
         </motion.div>
       </div>
