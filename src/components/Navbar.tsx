@@ -4,11 +4,11 @@ import { HiMenuAlt3, HiX } from 'react-icons/hi'
 import { REGISTRATION_LINK } from '../config'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Division', href: '#division' },
-  { label: 'Timeline', href: '#timeline' },
-  { label: 'Contact', href: '#footer' },
+  { label: 'Beranda', href: '#home' },
+  { label: 'Tentang', href: '#about' },
+  { label: 'Divisi', href: '#division' },
+  { label: 'Linimasa', href: '#timeline' },
+  { label: 'Kontak', href: '#footer' },
 ]
 
 export default function Navbar() {
@@ -60,7 +60,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="px-5 py-2.5 text-sm font-semibold rounded-full bg-gradient-to-r from-primary to-primary-light text-white hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:-translate-y-0.5"
             >
-              Join Now
+              Daftar Sekarang
             </a>
           </div>
 
@@ -109,7 +109,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="block mt-3 py-3 px-4 text-center font-semibold rounded-xl bg-gradient-to-r from-primary to-primary-light text-white"
               >
-                Join Now
+                Daftar Sekarang
               </motion.a>
             </div>
           </motion.div>
