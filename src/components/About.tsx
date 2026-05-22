@@ -4,30 +4,29 @@ import { HiLightningBolt, HiUserGroup, HiGlobe } from 'react-icons/hi'
 const features = [
   {
     icon: HiLightningBolt,
-    title: 'Skill Development',
-    desc: 'Level up your skills through hands-on projects and mentorship from experienced professionals.',
+    title: 'Pengembangan Keterampilan',
+    desc: 'Tingkatkan kemampuanmu melalui proyek langsung dan bimbingan dari profesional berpengalaman.',
   },
   {
     icon: HiUserGroup,
-    title: 'Community Network',
-    desc: 'Connect with like-minded individuals, build lasting relationships, and expand your network.',
+    title: 'Jaringan Komunitas',
+    desc: 'Terhubung dengan individu yang sepemikiran, bangun hubungan yang langgeng, dan perluas jaringanmu.',
   },
   {
     icon: HiGlobe,
-    title: 'Real Impact',
-    desc: 'Contribute to meaningful projects that make a difference in the community and beyond.',
+    title: 'Dampak Nyata',
+    desc: 'Berkontribusi pada proyek-proyek bermakna yang membuat perubahan di komunitas dan sekitarnya.',
   },
 ]
 
 export default function About() {
   return (
     <section id="about" className="relative py-24 lg:py-32 px-4">
-      {/* Decorative blob */}
       <div className="absolute top-1/2 right-0 w-72 h-72 rounded-full bg-primary/8 blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Left - Text */}
+          {/* Kiri - Teks */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -35,27 +34,27 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <span className="text-primary font-semibold text-sm tracking-wider uppercase">
-              About Us
+              Tentang Kami
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mt-3 mb-6 leading-tight">
-              Empowering{' '}
-              <span className="text-gradient">Changemakers</span> Through
-              Collaboration
+              Memberdayakan{' '}
+              <span className="text-gradient">Para Penggerak Perubahan</span>{' '}
+              Melalui Kolaborasi
             </h2>
             <p className="text-gray-400 leading-relaxed text-lg">
-              Volunext is a community-driven platform that connects passionate
-              individuals with opportunities to grow, create, and lead. Whether
-              you're a designer, developer, organizer, or content creator —
-              there's a place for you here.
+              Volunext adalah platform berbasis komunitas yang menghubungkan
+              individu-individu bersemangat dengan peluang untuk tumbuh,
+              berkarya, dan memimpin. Baik kamu seorang desainer, pengembang,
+              penyelenggara acara, maupun kreator konten — selalu ada tempat
+              untukmu di sini.
             </p>
             <p className="text-gray-500 leading-relaxed mt-4">
-              We believe in the power of collective action. Our events and
-              programs are designed to foster collaboration, innovation, and
-              real-world impact.
+              Kami percaya pada kekuatan aksi kolektif. Acara dan program kami
+              dirancang untuk mendorong kolaborasi, inovasi, dan dampak nyata.
             </p>
           </motion.div>
 
-          {/* Right - Feature Cards */}
+          {/* Kanan - Kartu Fitur */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
