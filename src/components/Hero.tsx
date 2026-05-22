@@ -1,5 +1,6 @@
 import { motion, easeOut } from 'framer-motion'
 import { HiArrowRight } from 'react-icons/hi'
+import { REGISTRATION_LINK } from '../config' 
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -34,7 +35,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           <span className="text-sm font-medium text-gray-300">
-            Open Volunteer 2025
+            Open Volunteer 2026
           </span>
         </motion.div>
 
@@ -77,7 +78,9 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#division"
+            href={REGISTRATION_LINK}          
+            target="_blank"                 
+            rel="noopener noreferrer"    
             className="group inline-flex items-center gap-2 px-8 py-4 font-semibold text-white rounded-full bg-gradient-to-r from-primary to-primary-light hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1"
           >
             Get Started
