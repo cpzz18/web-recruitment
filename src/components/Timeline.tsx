@@ -8,23 +8,23 @@ import {
 const steps = [
   {
     icon: HiDocumentText,
-    title: 'Open Registration',
-    date: 'Phase 1',
-    desc: 'Submit your application through our online form. Tell us about your skills, experience, and which division excites you the most.',
+    title: 'Pendaftaran Dibuka',
+    date: 'Tahap 1',
+    desc: 'Kirimkan aplikasimu melalui formulir online. Ceritakan tentang keahlian, pengalaman, dan divisi mana yang paling kamu minati.',
     status: 'active',
   },
   {
     icon: HiUserGroup,
-    title: 'Interview',
-    date: 'Phase 2',
-    desc: 'Shortlisted candidates will be invited for a friendly chat. We want to get to know you and understand your motivation.',
+    title: 'Wawancara',
+    date: 'Tahap 2',
+    desc: 'Kandidat terpilih akan diundang untuk obrolan santai. Kami ingin mengenalmu lebih dekat dan memahami motivasimu.',
     status: 'upcoming',
   },
   {
     icon: HiSpeakerphone,
-    title: 'Announcement',
-    date: 'Phase 3',
-    desc: 'Selected volunteers will be announced. Get ready to embark on an exciting journey with the Volunext family!',
+    title: 'Pengumuman',
+    date: 'Tahap 3',
+    desc: 'Relawan terpilih akan diumumkan. Bersiaplah untuk memulai perjalanan seru bersama keluarga Volunext!',
     status: 'upcoming',
   },
 ]
@@ -32,11 +32,10 @@ const steps = [
 export default function Timeline() {
   return (
     <section id="timeline" className="relative py-24 lg:py-32 px-4">
-      {/* Blob decoration */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-primary/6 blur-[120px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
+        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,21 +44,21 @@ export default function Timeline() {
           className="text-center mb-20"
         >
           <span className="text-primary font-semibold text-sm tracking-wider uppercase">
-            Timeline
+            Linimasa
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mt-3 mb-4">
-            How to{' '}
-            <span className="text-gradient">Join</span>
+            Cara{' '}
+            <span className="text-gradient">Bergabung</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Our selection process is simple and transparent. Here's what to
-            expect on your journey to becoming part of Volunext.
+            Proses seleksi kami sederhana dan transparan. Inilah yang bisa kamu
+            harapkan dalam perjalanan menjadi bagian dari Volunext.
           </p>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical Line */}
+          {/* Garis Vertikal */}
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/20 to-transparent md:-translate-x-px" />
 
           {steps.map((step, i) => (
@@ -73,7 +72,7 @@ export default function Timeline() {
                 i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
               }`}
             >
-              {/* Content */}
+              {/* Konten */}
               <div
                 className={`flex-1 ${
                   i % 2 === 0 ? 'md:text-right md:pr-0' : 'md:text-left md:pl-0'
@@ -94,13 +93,13 @@ export default function Timeline() {
                   </p>
                   {step.status === 'active' && (
                     <span className="inline-block mt-3 px-3 py-1 text-xs font-medium rounded-full bg-primary/15 text-primary border border-primary/30">
-                      Current Phase
+                      Fase Saat Ini
                     </span>
                   )}
                 </motion.div>
               </div>
 
-              {/* Dot on the line */}
+              {/* Titik pada garis */}
               <div className="absolute left-6 md:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
                 <motion.div
                   whileHover={{ scale: 1.3 }}
@@ -118,7 +117,7 @@ export default function Timeline() {
                 </motion.div>
               </div>
 
-              {/* Spacer for alternating layout */}
+              {/* Spacer untuk layout selang-seling */}
               <div className="hidden md:block flex-1" />
             </motion.div>
           ))}
