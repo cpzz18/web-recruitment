@@ -1,0 +1,1 @@
+export const REGISTRATION_LINK = "https://bit.ly/volunext-daftar" 
