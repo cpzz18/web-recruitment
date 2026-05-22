@@ -15,10 +15,10 @@ export default {
           accent: '#34d399',
         },
         fontFamily: {
-          heading: ['Poppins', 'sans-serif'],
-          body: ['Inter', 'sans-serif'],
-          display: ['Outfit', 'sans-serif'],
-        },
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
         animation: {
           'blob': 'blob 8s ease-in-out infinite',
           'blob-slow': 'blob 12s ease-in-out infinite',
