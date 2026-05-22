@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiChevronDown } from 'react-icons/hi'
+import FadeContent from '../animations/FadeContent'
+import TrueFocus from '../animations/TrueFocus'
 
 const faqs = [
   {
@@ -27,75 +29,82 @@ const faqs = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i)
 
   return (
     <section id="faq" className="relative py-24 lg:py-32 px-4">
-      <div className="max-w-3xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase">
-            FAQ
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mt-3 mb-4">
-            Pertanyaan yang Sering{' '}
-            <span className="text-gradient">Ditanyakan</span>
-          </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
-            Semua yang perlu kamu ketahui sebelum mendaftar menjadi relawan Volunext.
-          </p>
-        </motion.div>
+      <FadeContent>
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="text-primary font-semibold text-sm tracking-wider uppercase">
+              FAQ
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mt-3 mb-4">
+              Pertanyaan yang Sering{' '}
+              <span className="text-gradient">Ditanyakan</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Semua yang perlu kamu ketahui sebelum mendaftar menjadi relawan Volunext.
+            </p>
+          </motion.div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="glass-card overflow-hidden"
-            >
-              <button
-                onClick={() => toggle(i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.4 }}
               >
-                <span className="font-heading font-medium text-light pr-4">
-                  {faq.q}
-                </span>
-                <motion.span
-                  animate={{ rotate: openIndex === i ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-primary flex-shrink-0"
+                <TrueFocus
+                  hoverColor="rgba(16, 185, 129, 0.08)"
+                  className="rounded-2xl"
                 >
-                  <HiChevronDown size={20} />
-                </motion.span>
-              </button>
-              <AnimatePresence>
-                {openIndex === i && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <p className="px-5 pb-5 text-gray-400 text-sm leading-relaxed">
-                      {faq.a}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+                  <div className="glass-card overflow-hidden">
+                    <button
+                      onClick={() => toggle(i)}
+                      className="w-full flex items-center justify-between p-5 text-left"
+                    >
+                      <span className="font-heading font-medium text-light pr-4">
+                        {faq.q}
+                      </span>
+                      <motion.span
+                        animate={{ rotate: openIndex === i ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-primary flex-shrink-0"
+                      >
+                        <HiChevronDown size={20} />
+                      </motion.span>
+                    </button>
+                    <AnimatePresence>
+                      {openIndex === i && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <p className="px-5 pb-5 text-gray-400 text-sm leading-relaxed">
+                            {faq.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </TrueFocus>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      </FadeContent>
     </section>
   )
 }
