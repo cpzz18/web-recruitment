@@ -72,7 +72,6 @@ export default function Timeline() {
                 i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
               }`}
             >
-              {/* Konten */}
               <div
                 className={`flex-1 ${
                   i % 2 === 0 ? 'md:text-right md:pr-0' : 'md:text-left md:pl-0'
@@ -99,7 +98,6 @@ export default function Timeline() {
                 </motion.div>
               </div>
 
-              {/* Titik pada garis */}
               <div className="absolute left-6 md:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
                 <motion.div
                   whileHover={{ scale: 1.3 }}
@@ -117,7 +115,6 @@ export default function Timeline() {
                 </motion.div>
               </div>
 
-              {/* Spacer untuk layout selang-seling */}
               <div className="hidden md:block flex-1" />
             </motion.div>
           ))}

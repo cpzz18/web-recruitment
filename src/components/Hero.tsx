@@ -35,7 +35,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           <span className="text-sm font-medium text-gray-300">
-            Pendaftaran Relawan 2025
+            Pendaftaran Relawan 2026
           </span>
         </motion.div>
 
