@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, ReactNode, CSSProperties } from 'react'
+import { useRef, useEffect, ReactNode, CSSProperties } from 'react'
 
 interface TrueFocusProps {
   children: ReactNode
