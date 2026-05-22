@@ -1,1 +1,1 @@
-export const REGISTRATION_LINK = "https://bit.ly/volunext-daftar" 
+export const REGISTRATION_LINK = "https://tally.so/r/EkN1LL#" 
