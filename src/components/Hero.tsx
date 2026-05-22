@@ -1,6 +1,6 @@
 import { motion, easeOut } from 'framer-motion'
 import { HiArrowRight } from 'react-icons/hi'
-import { REGISTRATION_LINK } from '../config' 
+import { REGISTRATION_LINK } from '../config'
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -35,7 +35,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           <span className="text-sm font-medium text-gray-300">
-            Open Volunteer 2026
+            Pendaftaran Relawan 2025
           </span>
         </motion.div>
 
@@ -48,9 +48,9 @@ export default function Hero() {
           viewport={{ once: true }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6"
         >
-          Join Our
+          Bergabunglah dengan
           <br />
-          <span className="text-gradient">Volunteer Team</span>
+          <span className="text-gradient">Tim Relawan Kami</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -62,10 +62,10 @@ export default function Hero() {
           viewport={{ once: true }}
           className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Build <span className="text-light font-medium">Experience</span> &{' '}
-          <span className="text-light font-medium">Connection</span> through
-          meaningful projects. Collaborate, learn, and grow with a passionate
-          community of creators and changemakers.
+          Bangun <span className="text-light font-medium">Pengalaman</span> &{' '}
+          <span className="text-light font-medium">Koneksi</span> melalui
+          proyek-proyek bermakna. Berkolaborasi, belajar, dan tumbuh bersama
+          komunitas kreator dan penggerak perubahan yang bersemangat.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -78,19 +78,19 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href={REGISTRATION_LINK}          
-            target="_blank"                 
-            rel="noopener noreferrer"    
+            href={REGISTRATION_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-8 py-4 font-semibold text-white rounded-full bg-gradient-to-r from-primary to-primary-light hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1"
           >
-            Get Started
+            Daftar Sekarang
             <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#about"
             className="px-8 py-4 font-semibold text-gray-300 rounded-full border border-white/10 hover:border-primary/40 hover:text-primary transition-all duration-300 hover:-translate-y-1"
           >
-            Learn More
+            Pelajari Lebih Lanjut
           </a>
         </motion.div>
 
@@ -104,9 +104,9 @@ export default function Hero() {
           className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto"
         >
           {[
-            { value: '500+', label: 'Volunteers' },
-            { value: '20+', label: 'Projects' },
-            { value: '4', label: 'Divisions' },
+            { value: '500+', label: 'Relawan' },
+            { value: '20+', label: 'Proyek' },
+            { value: '4', label: 'Divisi' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-display font-bold text-gradient">
